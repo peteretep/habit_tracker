@@ -1,0 +1,24 @@
+{
+  "resources": [
+    {
+      "name": "Habits",
+      "examples": [
+        {
+          "description": "Creating a habit",
+          "link": "habits/creating_a_habit.json",
+          "groups": "all"
+        },
+        {
+          "description": "Get one habit",
+          "link": "habits/get_one_habit.json",
+          "groups": "all"
+        },
+        {
+          "description": "Listing habits",
+          "link": "habits/listing_habits.json",
+          "groups": "all"
+        }
+      ]
+    }
+  ]
+}

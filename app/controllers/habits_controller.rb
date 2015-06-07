@@ -59,11 +59,11 @@ class HabitsController < ApplicationController
 
   private
 
-    def set_habit
-      @habit = Habit.find(params[:id])
-    end
+  def set_habit
+    @habit = Habit.find(params[:id])
+  end
 
-    def habit_params
-      params.require(:habit).permit(:name, :streak)
-    end
+  def habit_params
+    params.require(:habit).permit(:name, :streak)
+  end
 end
