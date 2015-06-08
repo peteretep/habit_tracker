@@ -1,8 +1,8 @@
 {
   "resource": "Habits",
-  "http_method": "GET",
-  "route": "/habits/1",
-  "description": "Get one habit",
+  "http_method": "PUT",
+  "route": "/habits/:id/add_one",
+  "description": "Adding a day to the streak",
   "explanation": null,
   "parameters": [
 
@@ -12,28 +12,30 @@
   ],
   "requests": [
     {
-      "request_method": "GET",
-      "request_path": "/habits/1",
+      "request_method": "PUT",
+      "request_path": "/habits/1/add_one",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
         "Cookie": ""
       },
       "request_query_parameters": {
       },
-      "request_content_type": null,
+      "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"habit\":{\"id\":1,\"name\":\"Excercise 1hr\",\"streak\":24}}",
+      "response_body": "{\"habit\":{\"id\":1,\"name\":\"Avoid alcohol\",\"streak\":25}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
+        "Location": "http://example.org/habits/1",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"4b9c65590ea72555990687794b1e22f0\"",
+        "ETag": "\"c4e0bbfbfaab9c41b370ee374d9fccd5\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "4108efdf-1379-4d03-b7ee-2f27a263e812",
-        "X-Runtime": "0.002512",
+        "X-Request-Id": "1fbe5e80-be8e-47c6-8ac4-f4af3af66685",
+        "X-Runtime": "0.004557",
         "Content-Length": "53"
       },
       "response_content_type": "application/json; charset=utf-8",

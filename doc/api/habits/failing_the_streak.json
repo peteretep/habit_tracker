@@ -1,8 +1,8 @@
 {
   "resource": "Habits",
-  "http_method": "GET",
-  "route": "/habits/1",
-  "description": "Get one habit",
+  "http_method": "PUT",
+  "route": "/habits/:id/fail",
+  "description": "Failing the streak",
   "explanation": null,
   "parameters": [
 
@@ -12,29 +12,31 @@
   ],
   "requests": [
     {
-      "request_method": "GET",
-      "request_path": "/habits/1",
+      "request_method": "PUT",
+      "request_path": "/habits/1/fail",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
         "Cookie": ""
       },
       "request_query_parameters": {
       },
-      "request_content_type": null,
+      "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"habit\":{\"id\":1,\"name\":\"Excercise 1hr\",\"streak\":24}}",
+      "response_body": "{\"habit\":{\"id\":1,\"name\":\"Excercise 1hr\",\"streak\":0}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
+        "Location": "http://example.org/habits/1",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"4b9c65590ea72555990687794b1e22f0\"",
+        "ETag": "\"be8604fdca6df5cde2aee6f7a75b6b58\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "4108efdf-1379-4d03-b7ee-2f27a263e812",
-        "X-Runtime": "0.002512",
-        "Content-Length": "53"
+        "X-Request-Id": "dd8af755-3d73-4794-a86d-14865c06720b",
+        "X-Runtime": "0.002534",
+        "Content-Length": "52"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

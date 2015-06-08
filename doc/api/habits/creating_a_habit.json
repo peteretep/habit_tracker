@@ -3,7 +3,7 @@
   "http_method": "POST",
   "route": "/habits",
   "description": "Creating a habit",
-  "explanation": "First, create a habit, then make a later request to get it back",
+  "explanation": null,
   "parameters": [
     {
       "required": true,
@@ -62,8 +62,8 @@
         "Content-Type": "application/json; charset=utf-8",
         "ETag": "\"a0ce172c0bd468b4f9245e32ac64cb25\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "07ecaab5-3be1-4d82-87fd-e70e475802ed",
-        "X-Runtime": "0.005422",
+        "X-Request-Id": "39d3dc64-86e6-4fb9-a4ae-91a8f4995a39",
+        "X-Runtime": "0.003608",
         "Content-Length": "48"
       },
       "response_content_type": "application/json; charset=utf-8",
@@ -90,8 +90,8 @@
         "Content-Type": "application/json; charset=utf-8",
         "ETag": "\"a0ce172c0bd468b4f9245e32ac64cb25\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "b3f2fcc9-2f3b-4250-9b88-081d58a3f940",
-        "X-Runtime": "0.001669",
+        "X-Request-Id": "30b631e9-83fc-4656-ba09-7db112182cb9",
+        "X-Runtime": "0.001511",
         "Content-Length": "48"
       },
       "response_content_type": "application/json; charset=utf-8",

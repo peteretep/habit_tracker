@@ -17,7 +17,7 @@ resource 'Habits' do
     end
   end
 
-  post "/habits" do
+  post '/habits' do
     parameter :name, "Name of habit", required: true, scope: :habit
     parameter :streak, "Existing streak", required: false, scope: :habit
 
@@ -32,7 +32,6 @@ resource 'Habits' do
 
     example_request "Creating a habit" do
       json_resp = JSON.parse(response_body)
-      ap json_resp
       habit = json_resp['habit']
       expect(habit.except("id", "created_at", "updated_at")).to eq({
         'name' => name,
@@ -41,6 +40,24 @@ resource 'Habits' do
       expect(status).to eq(201)
 
       client.get(URI.parse(response_headers["location"]).path, {}, headers)
+      expect(status).to eq(200)
+    end
+  end
+
+  put '/habits/:id/add_one' do
+    let(:id) { habit1.id }
+    example_request 'Adding a day to the streak' do
+      json_resp = JSON.parse(response_body)
+      expect(json_resp['habit']['streak']).to eq habit1.streak + 1
+      expect(status).to eq(200)
+    end
+  end
+
+  put '/habits/:id/fail' do
+    let(:id) { habit1.id }
+    example_request 'Failing the streak' do
+      json_resp = JSON.parse(response_body)
+      expect(json_resp['habit']['streak']).to eq 0
       expect(status).to eq(200)
     end
   end

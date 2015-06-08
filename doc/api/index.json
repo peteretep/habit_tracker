@@ -4,8 +4,18 @@
       "name": "Habits",
       "examples": [
         {
+          "description": "Adding a day to the streak",
+          "link": "habits/adding_a_day_to_the_streak.json",
+          "groups": "all"
+        },
+        {
           "description": "Creating a habit",
           "link": "habits/creating_a_habit.json",
+          "groups": "all"
+        },
+        {
+          "description": "Failing the streak",
+          "link": "habits/failing_the_streak.json",
           "groups": "all"
         },
         {

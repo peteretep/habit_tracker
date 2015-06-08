@@ -27,14 +27,18 @@ class HabitsController < ApplicationController
     end
   end
 
+  # PATCH/PUT /habits/1/add_one
+  # PATCH/PUT /habits/1/add_one.json
   def add_one
     @habit.streak = @habit.streak + 1
-    render json: @habit, status: :updated, location: @habit if @habit.save
+    render json: @habit, location: @habit if @habit.save
   end
 
+  # PATCH/PUT /habits/1/fail
+  # PATCH/PUT /habits/1/fail.json
   def fail
     @habit.streak = 0
-    render json: @habit, status: :updated, location: @habit if @habit.save
+    render json: @habit, location: @habit if @habit.save
   end
 
   # PATCH/PUT /habits/1
